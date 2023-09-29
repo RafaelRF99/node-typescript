@@ -19,4 +19,15 @@ export class UserService {
     getAllUsers = () => {
         return db
     }
+
+    deleteUser = (email: string) => {
+        const indexToDelete = db.findIndex(user => user.email === email);
+
+        if (indexToDelete !== -1) {
+            db.splice(indexToDelete, 1);
+            console.log("Usuário excluído com sucesso!");
+        } else {
+            console.log("Usuário não encontrado");
+        }
+    }
 }

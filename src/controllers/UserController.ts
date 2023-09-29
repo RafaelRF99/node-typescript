@@ -14,7 +14,7 @@ export class UserController {
             return res.status(201).json({msg: "Usuario criado!"})
     }
 
-    getAllUsers = (res: Response) => {
+    getAllUsers = (req: Request, res: Response) => {
         const userService = new UserService()
         const users = userService.getAllUsers()
 

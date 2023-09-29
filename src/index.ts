@@ -10,6 +10,7 @@ server.get('/', (req: Request, res: Response) => {
     return res.status(200).json({msg: 'DioBank API'})
 })
 
+server.get('/user', userController.getAllUsers)
 server.post('/user', userController.createUser)
 
 const PORT = 3001

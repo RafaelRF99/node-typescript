@@ -13,5 +13,5 @@ server.get('/', (req: Request, res: Response) => {
 
 const PORT = 3001
 server.listen(PORT, () => {
-    console.log("Rodando na porta", PORT)
+    console.log("Rodando na porta", `http://localhost:${PORT}`)
 })
